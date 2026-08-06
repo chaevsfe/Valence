@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "${name}",
+  "description": "Modular vanilla+ additions. Every feature is its own toggle.",
+  "authors": [
+    "chaevsfe"
+  ],
+  "contact": {
+    "homepage": "https://github.com/chaevsfe/Valence",
+    "sources": "https://github.com/chaevsfe/Valence",
+    "issues": "https://github.com/chaevsfe/Valence/issues"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.chaevsfe.valence.Valence"
+    ],
+    "client": [
+      "com.chaevsfe.valence.client.ValenceClient"
+    ]
+  },
+  "mixins": [],
+  "accessWidener": "valence.ct",
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "fabric-api": "*",
+    "minecraft": "${minecraft}",
+    "java": ">=25"
+  }
+}
