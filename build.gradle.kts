@@ -19,6 +19,7 @@ dependencies {
 
     modImplementation("net.fabricmc:fabric-loader:${property("deps.fabric_loader")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${property("deps.fabric_api")}")
+    modCompileOnly("maven.modrinth:modmenu:${property("deps.modmenu")}")
 
     sc.properties.rawOrNull("run", "mods")?.asList().orEmpty().forEach {
         modLocalRuntime(it.toString())

@@ -20,6 +20,9 @@
     ],
     "client": [
       "com.chaevsfe.valence.client.ValenceClient"
+    ],
+    "modmenu": [
+      "com.chaevsfe.valence.client.gui.ValenceModMenu"
     ]
   },
   "mixins": [
