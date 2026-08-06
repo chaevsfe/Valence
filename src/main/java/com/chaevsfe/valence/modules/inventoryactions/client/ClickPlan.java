@@ -36,6 +36,16 @@ public final class ClickPlan
         return plan.steps;
     }
 
+    public static List<Step> quickMoveAll (AbstractContainerMenu menu, List<Integer> from) {
+        List<Step> steps = new ArrayList<>();
+        for (int index : from) {
+            ItemStack stack = menu.slots.get(index).getItem();
+            if (!stack.isEmpty())
+                steps.add(new Step(index, ContainerInput.QUICK_MOVE, stack.copy()));
+        }
+        return steps;
+    }
+
     public static List<Step> quickMoveMatching (AbstractContainerMenu menu, List<Integer> from, List<Integer> match) {
         List<Step> steps = new ArrayList<>();
         for (int index : from) {

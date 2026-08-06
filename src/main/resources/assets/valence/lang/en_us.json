@@ -118,6 +118,7 @@
   "key.valence.info_hud": "Toggle Info HUD",
   "key.valence.sort": "Sort Hovered Inventory",
   "valence.button.deposit": "Deposit matching stacks",
+  "valence.button.deposit_all": "Deposit everything",
   "valence.button.extract": "Extract matching stacks",
   "valence.button.sort_container": "Sort container",
   "valence.button.sort_player": "Sort inventory"

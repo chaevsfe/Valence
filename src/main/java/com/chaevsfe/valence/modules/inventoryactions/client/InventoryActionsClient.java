@@ -63,17 +63,23 @@ public class InventoryActionsClient implements ClientModule
 
         if (module.enabled() && module.options().bool("screen_buttons")) {
             List<AbstractWidget> widgets = Screens.getWidgets(screen);
-            int x = containerScreen.leftPos + containerScreen.imageWidth + 2;
+            boolean right = "right".equals(module.options().string("button_side"));
+            int x = (right ? containerScreen.leftPos + containerScreen.imageWidth + 2 : containerScreen.leftPos - 14)
+                + module.options().intOf("button_x");
+            int y = containerScreen.topPos + module.options().intOf("button_y");
+            List<Integer> depositSlots = module.options().bool("deposit_hotbar") ? matchSlots : inventorySlots;
             if (!containerSlots.isEmpty()) {
-                widgets.add(action("⇅", "valence.button.sort_container", x, containerScreen.topPos,
+                widgets.add(action("⇅", "valence.button.sort_container", x, y,
                     () -> ClickPlan.sort(menu, containerSlots)));
-                widgets.add(action("▲", "valence.button.deposit", x, containerScreen.topPos + 14,
-                    () -> ClickPlan.quickMoveMatching(menu, inventorySlots, containerSlots)));
-                widgets.add(action("▼", "valence.button.extract", x, containerScreen.topPos + 28,
+                widgets.add(action("▲", "valence.button.deposit", x, y + 14,
+                    () -> ClickPlan.quickMoveMatching(menu, depositSlots, containerSlots)));
+                widgets.add(action("⇈", "valence.button.deposit_all", x, y + 28,
+                    () -> ClickPlan.quickMoveAll(menu, depositSlots)));
+                widgets.add(action("▼", "valence.button.extract", x, y + 42,
                     () -> ClickPlan.quickMoveMatching(menu, containerSlots, matchSlots)));
             }
             if (!inventorySlots.isEmpty())
-                widgets.add(action("⇅", "valence.button.sort_player", x, containerScreen.topPos + containerScreen.imageHeight - 12,
+                widgets.add(action("⇅", "valence.button.sort_player", x, containerScreen.topPos + containerScreen.imageHeight - 12 + module.options().intOf("button_y"),
                     () -> ClickPlan.sort(menu, inventorySlots)));
         }
 

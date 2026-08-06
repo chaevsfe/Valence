@@ -27,6 +27,10 @@ public class InventoryActions extends ValenceModule
     @Override
     public void defineOptions (OptionBuilder builder) {
         builder.bool("screen_buttons", true, "Show sort, deposit and extract buttons on container screens")
+            .string("button_side", "left", "Screen side for the buttons, left or right")
+            .intOf("button_x", 0, -100, 100, "Horizontal pixel offset for the buttons")
+            .intOf("button_y", 0, -100, 100, "Vertical pixel offset for the buttons")
+            .bool("deposit_hotbar", false, "Deposit actions also move hotbar stacks")
             .intOf("clicks_per_tick", 4, 1, 20, "Inventory clicks sent per tick while an action runs");
     }
 
