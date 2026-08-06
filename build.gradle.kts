@@ -7,6 +7,10 @@ base.archivesName = property("mod.id") as String
 
 repositories {
     mavenCentral()
+    exclusiveContent {
+        forRepository { maven("https://api.modrinth.com/maven") { name = "Modrinth" } }
+        filter { includeGroup("maven.modrinth") }
+    }
 }
 
 dependencies {
@@ -15,6 +19,10 @@ dependencies {
 
     modImplementation("net.fabricmc:fabric-loader:${property("deps.fabric_loader")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${property("deps.fabric_api")}")
+
+    sc.properties.rawOrNull("run", "mods")?.asList().orEmpty().forEach {
+        modLocalRuntime(it.toString())
+    }
 
     testImplementation(platform("org.junit:junit-bom:5.11.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
