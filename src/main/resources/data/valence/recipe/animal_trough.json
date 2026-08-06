@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "#minecraft:planks"
+  },
+  "pattern": [
+    "# #",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "id": "valence:animal_trough"
+  },
+  "fabric:load_conditions": [
+    { "condition": "valence:module_enabled", "module": "animal_trough" }
+  ]
+}

@@ -22,7 +22,9 @@
       "com.chaevsfe.valence.client.ValenceClient"
     ]
   },
-  "mixins": [],
+  "mixins": [
+    "valence.mixins.json"
+  ],
   "accessWidener": "valence.ct",
   "depends": {
     "fabricloader": ">=0.19.3",

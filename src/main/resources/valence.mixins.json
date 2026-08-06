@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.chaevsfe.valence.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "AnimalMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
