@@ -96,8 +96,8 @@ public class ReacharoundClient implements ClientModule
         if (hidden || client.getDebugOverlay().showDebugScreen())
             return;
         int x = graphics.guiWidth() / 2;
-        int y = graphics.guiHeight() / 2 - client.font.lineHeight / 2;
-        graphics.text(client.font, "[", x - 8, y, 0xFFFFFFFF, true);
-        graphics.text(client.font, "]", x + 8 - client.font.width("]"), y, 0xFFFFFFFF, true);
+        int y = graphics.guiHeight() / 2 - 4;
+        graphics.text(client.font, "[", x - 9 - client.font.width("["), y, 0xFFFFFFFF, true);
+        graphics.text(client.font, "]", x + 9, y, 0xFFFFFFFF, true);
     }
 }
