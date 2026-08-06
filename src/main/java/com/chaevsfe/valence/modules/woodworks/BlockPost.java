@@ -1,6 +1,5 @@
 package com.chaevsfe.valence.modules.woodworks;
 
-import java.util.Map;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -18,14 +17,15 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class BlockPost extends RotatedPillarBlock implements SimpleWaterloggedBlock
 {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    private static final Map<Direction.Axis, VoxelShape> SHAPES = Shapes.rotateAllAxis(Block.column(6.0, 0.0, 16.0));
+    private static final VoxelShape SHAPE_Y = Block.box(5, 0, 5, 11, 16, 11);
+    private static final VoxelShape SHAPE_X = Block.box(0, 5, 5, 16, 11, 11);
+    private static final VoxelShape SHAPE_Z = Block.box(5, 5, 0, 11, 11, 16);
 
     public BlockPost (Properties properties) {
         super(properties);
@@ -40,7 +40,11 @@ public class BlockPost extends RotatedPillarBlock implements SimpleWaterloggedBl
 
     @Override
     protected VoxelShape getShape (BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES.get(state.getValue(AXIS));
+        return switch (state.getValue(AXIS)) {
+            case X -> SHAPE_X;
+            case Z -> SHAPE_Z;
+            default -> SHAPE_Y;
+        };
     }
 
     @Override
