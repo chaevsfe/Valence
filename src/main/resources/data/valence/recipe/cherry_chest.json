@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:chest",
+    "minecraft:cherry_planks"
+  ],
+  "result": {
+    "id": "valence:cherry_chest"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "woodworks"
+    }
+  ]
+}

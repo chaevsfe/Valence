@@ -1,0 +1,49 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "valence:spruce_chest",
+      "required": false
+    },
+    {
+      "id": "valence:birch_chest",
+      "required": false
+    },
+    {
+      "id": "valence:jungle_chest",
+      "required": false
+    },
+    {
+      "id": "valence:acacia_chest",
+      "required": false
+    },
+    {
+      "id": "valence:dark_oak_chest",
+      "required": false
+    },
+    {
+      "id": "valence:mangrove_chest",
+      "required": false
+    },
+    {
+      "id": "valence:cherry_chest",
+      "required": false
+    },
+    {
+      "id": "valence:pale_oak_chest",
+      "required": false
+    },
+    {
+      "id": "valence:crimson_chest",
+      "required": false
+    },
+    {
+      "id": "valence:warped_chest",
+      "required": false
+    },
+    {
+      "id": "valence:bamboo_chest",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "valence:block/post",
+  "textures": {
+    "side": "minecraft:block/cherry_log",
+    "top": "minecraft:block/cherry_log_top"
+  }
+}

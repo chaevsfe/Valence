@@ -1,0 +1,24 @@
+{
+  "source": "~/.gradle/caches/fabric-loom/26.2/minecraft-merged.jar (verified against 26.1 minecraft-merged.jar)",
+  "woods": [
+    {"name": "oak", "planks": "minecraft:block/oak_planks", "planks_block": "minecraft:oak_planks", "log_block": "minecraft:oak_log", "log_side": "minecraft:block/oak_log", "log_top": "minecraft:block/oak_log_top", "stem": false, "in_26_1": true},
+    {"name": "spruce", "planks": "minecraft:block/spruce_planks", "planks_block": "minecraft:spruce_planks", "log_block": "minecraft:spruce_log", "log_side": "minecraft:block/spruce_log", "log_top": "minecraft:block/spruce_log_top", "stem": false, "in_26_1": true},
+    {"name": "birch", "planks": "minecraft:block/birch_planks", "planks_block": "minecraft:birch_planks", "log_block": "minecraft:birch_log", "log_side": "minecraft:block/birch_log", "log_top": "minecraft:block/birch_log_top", "stem": false, "in_26_1": true},
+    {"name": "jungle", "planks": "minecraft:block/jungle_planks", "planks_block": "minecraft:jungle_planks", "log_block": "minecraft:jungle_log", "log_side": "minecraft:block/jungle_log", "log_top": "minecraft:block/jungle_log_top", "stem": false, "in_26_1": true},
+    {"name": "acacia", "planks": "minecraft:block/acacia_planks", "planks_block": "minecraft:acacia_planks", "log_block": "minecraft:acacia_log", "log_side": "minecraft:block/acacia_log", "log_top": "minecraft:block/acacia_log_top", "stem": false, "in_26_1": true},
+    {"name": "dark_oak", "planks": "minecraft:block/dark_oak_planks", "planks_block": "minecraft:dark_oak_planks", "log_block": "minecraft:dark_oak_log", "log_side": "minecraft:block/dark_oak_log", "log_top": "minecraft:block/dark_oak_log_top", "stem": false, "in_26_1": true},
+    {"name": "mangrove", "planks": "minecraft:block/mangrove_planks", "planks_block": "minecraft:mangrove_planks", "log_block": "minecraft:mangrove_log", "log_side": "minecraft:block/mangrove_log", "log_top": "minecraft:block/mangrove_log_top", "stem": false, "in_26_1": true},
+    {"name": "cherry", "planks": "minecraft:block/cherry_planks", "planks_block": "minecraft:cherry_planks", "log_block": "minecraft:cherry_log", "log_side": "minecraft:block/cherry_log", "log_top": "minecraft:block/cherry_log_top", "stem": false, "in_26_1": true},
+    {"name": "pale_oak", "planks": "minecraft:block/pale_oak_planks", "planks_block": "minecraft:pale_oak_planks", "log_block": "minecraft:pale_oak_log", "log_side": "minecraft:block/pale_oak_log", "log_top": "minecraft:block/pale_oak_log_top", "stem": false, "in_26_1": true},
+    {"name": "crimson", "planks": "minecraft:block/crimson_planks", "planks_block": "minecraft:crimson_planks", "log_block": "minecraft:crimson_stem", "log_side": "minecraft:block/crimson_stem", "log_top": "minecraft:block/crimson_stem_top", "stem": true, "in_26_1": true},
+    {"name": "warped", "planks": "minecraft:block/warped_planks", "planks_block": "minecraft:warped_planks", "log_block": "minecraft:warped_stem", "log_side": "minecraft:block/warped_stem", "log_top": "minecraft:block/warped_stem_top", "stem": true, "in_26_1": true},
+    {"name": "bamboo", "planks": "minecraft:block/bamboo_planks", "planks_block": "minecraft:bamboo_planks", "log_block": null, "log_side": null, "log_top": null, "stem": false, "in_26_1": true}
+  ],
+  "notes": {
+    "bamboo": "bamboo_block / stripped_bamboo_block exist (textures block/bamboo_block + block/bamboo_block_top) but are in #minecraft:bamboo_blocks, NOT #minecraft:logs; log fields left null per schema.",
+    "stripped_variants": "stripped_<name>_log / stripped_<name>_wood exist for all 9 log families; stripped_crimson_stem / stripped_crimson_hyphae and warped equivalents for stems; stripped_bamboo_block for bamboo.",
+    "family_tags": "per-wood block tag <name>_logs = [<name>_log, <name>_wood, stripped_<name>_log, stripped_<name>_wood]; crimson_stems/warped_stems use stem/hyphae; bamboo_blocks = [bamboo_block, stripped_bamboo_block].",
+    "flammability_planks": "FireBlock.bootStrap(): setFlammable(<planks>, 5, 20) for all 10 burnable planks (crimson/warped/nether blocks absent = not flammable); logs 5,5; bookshelf 30,20.",
+    "diff_26_1_vs_26_2": "identical 12-family set in both jars"
+  }
+}

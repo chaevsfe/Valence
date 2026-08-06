@@ -52,6 +52,186 @@
     {
       "id": "valence:warped_vertical_slab",
       "required": false
+    },
+    {
+      "id": "valence:animal_trough",
+      "required": false
+    },
+    {
+      "id": "valence:oak_post",
+      "required": false
+    },
+    {
+      "id": "valence:spruce_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:spruce_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:spruce_chest",
+      "required": false
+    },
+    {
+      "id": "valence:spruce_post",
+      "required": false
+    },
+    {
+      "id": "valence:birch_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:birch_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:birch_chest",
+      "required": false
+    },
+    {
+      "id": "valence:birch_post",
+      "required": false
+    },
+    {
+      "id": "valence:jungle_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:jungle_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:jungle_chest",
+      "required": false
+    },
+    {
+      "id": "valence:jungle_post",
+      "required": false
+    },
+    {
+      "id": "valence:acacia_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:acacia_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:acacia_chest",
+      "required": false
+    },
+    {
+      "id": "valence:acacia_post",
+      "required": false
+    },
+    {
+      "id": "valence:dark_oak_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:dark_oak_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:dark_oak_chest",
+      "required": false
+    },
+    {
+      "id": "valence:dark_oak_post",
+      "required": false
+    },
+    {
+      "id": "valence:mangrove_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:mangrove_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:mangrove_chest",
+      "required": false
+    },
+    {
+      "id": "valence:mangrove_post",
+      "required": false
+    },
+    {
+      "id": "valence:cherry_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:cherry_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:cherry_chest",
+      "required": false
+    },
+    {
+      "id": "valence:cherry_post",
+      "required": false
+    },
+    {
+      "id": "valence:pale_oak_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:pale_oak_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:pale_oak_chest",
+      "required": false
+    },
+    {
+      "id": "valence:pale_oak_post",
+      "required": false
+    },
+    {
+      "id": "valence:crimson_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:crimson_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:crimson_chest",
+      "required": false
+    },
+    {
+      "id": "valence:crimson_post",
+      "required": false
+    },
+    {
+      "id": "valence:warped_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:warped_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:warped_chest",
+      "required": false
+    },
+    {
+      "id": "valence:warped_post",
+      "required": false
+    },
+    {
+      "id": "valence:bamboo_ladder",
+      "required": false
+    },
+    {
+      "id": "valence:bamboo_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:bamboo_chest",
+      "required": false
     }
   ]
 }

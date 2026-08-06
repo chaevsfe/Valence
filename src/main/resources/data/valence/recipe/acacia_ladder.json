@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_ladder",
+  "key": {
+    "#": "minecraft:stick",
+    "P": "minecraft:acacia_planks"
+  },
+  "pattern": [
+    "# #",
+    "#P#",
+    "# #"
+  ],
+  "result": {
+    "count": 4,
+    "id": "valence:acacia_ladder"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "woodworks"
+    }
+  ]
+}

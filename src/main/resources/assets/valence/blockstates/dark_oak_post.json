@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "valence:block/dark_oak_post"
+    },
+    "axis=x": {
+      "model": "valence:block/dark_oak_post",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "valence:block/dark_oak_post",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "valence:block/post",
+  "textures": {
+    "side": "minecraft:block/warped_stem",
+    "top": "minecraft:block/warped_stem_top"
+  }
+}

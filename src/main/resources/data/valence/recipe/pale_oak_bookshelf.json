@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "minecraft:pale_oak_planks",
+    "X": "minecraft:book"
+  },
+  "pattern": [
+    "###",
+    "XXX",
+    "###"
+  ],
+  "result": {
+    "id": "valence:pale_oak_bookshelf"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "woodworks"
+    }
+  ]
+}

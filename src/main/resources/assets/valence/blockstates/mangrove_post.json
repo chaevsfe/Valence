@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "valence:block/mangrove_post"
+    },
+    "axis=x": {
+      "model": "valence:block/mangrove_post",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "valence:block/mangrove_post",
+      "x": 90
+    }
+  }
+}

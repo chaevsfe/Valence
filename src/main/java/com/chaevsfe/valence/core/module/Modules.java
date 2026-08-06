@@ -5,7 +5,9 @@ import com.chaevsfe.valence.core.config.ConfigSnapshot;
 import com.chaevsfe.valence.core.config.OptionBuilder;
 import com.chaevsfe.valence.modules.helditem.HeldItemReadout;
 import com.chaevsfe.valence.modules.infohud.InfoHud;
+import com.chaevsfe.valence.modules.trough.AnimalTrough;
 import com.chaevsfe.valence.modules.verticalslabs.VerticalSlabs;
+import com.chaevsfe.valence.modules.woodworks.Woodworks;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +20,9 @@ public final class Modules
     public static final List<ValenceModule> ALL = List.of(
         new HeldItemReadout(),
         new InfoHud(),
-        new VerticalSlabs());
+        new VerticalSlabs(),
+        new Woodworks(),
+        new AnimalTrough());
 
     private static final Map<String, ValenceModule> BY_ID =
         ALL.stream().collect(Collectors.toMap(m -> m.id, Function.identity()));

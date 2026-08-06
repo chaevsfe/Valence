@@ -124,10 +124,11 @@ def main():
         mineable[slab["mineable"]].append(f"valence:{vid}")
 
     for tool, values in mineable.items():
-        write(f"data/minecraft/tags/block/mineable/{tool}.json", {
-            "replace": False,
-            "values": [{"id": v, "required": False} for v in values],
-        })
+        path = os.path.join(RES, f"data/minecraft/tags/block/mineable/{tool}.json")
+        existing = json.load(open(path))["values"] if os.path.exists(path) else []
+        known = {e["id"] if isinstance(e, dict) else e for e in existing}
+        existing += [{"id": v, "required": False} for v in values if v not in known]
+        write(f"data/minecraft/tags/block/mineable/{tool}.json", {"replace": False, "values": existing})
 
     lang_path = os.path.join(RES, "assets/valence/lang/en_us.json")
     lang = json.load(open(lang_path)) if os.path.exists(lang_path) else {}

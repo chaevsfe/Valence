@@ -1,0 +1,49 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "valence:spruce_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:birch_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:jungle_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:acacia_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:dark_oak_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:mangrove_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:cherry_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:pale_oak_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:crimson_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:warped_bookshelf",
+      "required": false
+    },
+    {
+      "id": "valence:bamboo_bookshelf",
+      "required": false
+    }
+  ]
+}
