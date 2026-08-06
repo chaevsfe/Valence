@@ -4,6 +4,7 @@ import com.chaevsfe.valence.core.config.ConfigSnapshot;
 import com.chaevsfe.valence.core.config.ConfigView;
 import com.chaevsfe.valence.core.config.OptionBuilder;
 import java.util.function.Supplier;
+import net.minecraft.world.item.CreativeModeTab;
 
 public abstract class ValenceModule
 {
@@ -39,6 +40,8 @@ public abstract class ValenceModule
     public void register () { }
 
     public void init () { }
+
+    public void addTabItems (CreativeModeTab.Output output) { }
 
     public Supplier<ClientModule> client () {
         return null;

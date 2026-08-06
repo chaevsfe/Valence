@@ -46,8 +46,13 @@ def gen(slab):
         "textures": slab["textures"],
     })
 
+    write(f"assets/valence/models/block/{vid}_item.json", {
+        "parent": "valence:block/vertical_slab_item",
+        "textures": slab["textures"],
+    })
+
     write(f"assets/valence/items/{vid}.json", {
-        "model": {"type": "minecraft:model", "model": f"valence:block/{vid}"},
+        "model": {"type": "minecraft:model", "model": f"valence:block/{vid}_item"},
     })
 
     write(f"data/valence/loot_table/blocks/{vid}.json", {

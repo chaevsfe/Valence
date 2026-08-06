@@ -13,6 +13,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -56,5 +57,11 @@ public class VerticalSlabs extends ValenceModule
             for (Entry entry : entries)
                 output.insertAfter(entry.parent(), entry.item());
         });
+    }
+
+    @Override
+    public void addTabItems (CreativeModeTab.Output output) {
+        for (Entry entry : entries)
+            output.accept(entry.item());
     }
 }

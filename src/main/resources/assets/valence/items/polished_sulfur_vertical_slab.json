@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "valence:block/polished_sulfur_vertical_slab"
+    "model": "valence:block/polished_sulfur_vertical_slab_item"
   }
 }

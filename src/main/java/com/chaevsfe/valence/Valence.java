@@ -2,6 +2,7 @@ package com.chaevsfe.valence;
 
 import com.chaevsfe.valence.core.ModConstants;
 import com.chaevsfe.valence.core.ModServices;
+import com.chaevsfe.valence.core.ValenceTab;
 import com.chaevsfe.valence.core.config.ConfigSnapshot;
 import com.chaevsfe.valence.core.config.ValenceConfig;
 import com.chaevsfe.valence.core.data.ModuleEnabledCondition;
@@ -23,6 +24,7 @@ public class Valence implements ModInitializer
 
         for (ValenceModule m : Modules.ALL)
             m.register();
+        ValenceTab.register();
         for (ValenceModule m : Modules.ALL)
             m.init();
 

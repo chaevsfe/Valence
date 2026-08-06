@@ -67,6 +67,7 @@
   "block.valence.waxed_oxidized_cut_copper_vertical_slab": "Waxed Oxidized Cut Copper Vertical Slab",
   "block.valence.waxed_weathered_cut_copper_vertical_slab": "Waxed Weathered Cut Copper Vertical Slab",
   "block.valence.weathered_cut_copper_vertical_slab": "Weathered Cut Copper Vertical Slab",
+  "itemGroup.valence": "Valence",
   "key.categories.valence": "Valence",
   "key.categories.valence.valence": "Valence",
   "key.valence.info_hud": "Toggle Info HUD"
