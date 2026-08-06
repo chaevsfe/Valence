@@ -10,16 +10,13 @@ import com.chaevsfe.valence.core.module.Modules;
 import com.chaevsfe.valence.core.module.ValenceModule;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
-import net.fabricmc.loader.api.FabricLoader;
 
 public class Valence implements ModInitializer
 {
     @Override
     public void onInitialize () {
         ResourceConditions.register(ModuleEnabledCondition.TYPE);
-        ConfigSnapshot snap = ValenceConfig.load(
-            FabricLoader.getInstance().getConfigDir().resolve(ModConstants.MOD_ID + ".json5"),
-            Modules.schema());
+        ConfigSnapshot snap = ValenceConfig.load(ModConstants.configPath(), Modules.schema());
         Modules.applyConfig(snap);
 
         for (ValenceModule m : Modules.ALL)

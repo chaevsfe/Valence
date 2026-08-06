@@ -38,6 +38,10 @@ public final class Modules
         return m != null && m.enabled();
     }
 
+    public static ValenceModule get (String id) {
+        return BY_ID.get(id);
+    }
+
     public static ConfigSchema schema () {
         List<ConfigSchema.ModuleDef> defs = new ArrayList<>();
         for (ValenceModule m : ALL) {

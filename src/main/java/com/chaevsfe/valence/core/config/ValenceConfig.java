@@ -20,6 +20,24 @@ public final class ValenceConfig
         return snap;
     }
 
+    public static ConfigSnapshot save (Path file, ConfigSchema schema, Map<String, Boolean> enabled, Map<String, Map<String, Object>> values) {
+        Map<String, Object> parsed = readTree(file);
+        Map<String, Boolean> outEnabled = new LinkedHashMap<>();
+        Map<String, ConfigView> outOptions = new LinkedHashMap<>();
+        for (ConfigSchema.ModuleDef def : schema.modules) {
+            Boolean on = enabled.get(def.id());
+            outEnabled.put(def.id(), on != null ? on : def.defaultEnabled());
+            Map<String, Object> in = values.getOrDefault(def.id(), Map.of());
+            Map<String, Object> sane = new LinkedHashMap<>();
+            for (Option o : def.options())
+                sane.put(o.key, o.sanitize(in.get(o.key)));
+            outOptions.put(def.id(), new ConfigView(sane));
+        }
+        ConfigSnapshot snap = new ConfigSnapshot(outEnabled, outOptions);
+        writeIfChanged(file, ConfigEmitter.emit(schema, snap, parsed));
+        return snap;
+    }
+
     private static Map<String, Object> readTree (Path file) {
         if (!Files.exists(file))
             return Map.of();

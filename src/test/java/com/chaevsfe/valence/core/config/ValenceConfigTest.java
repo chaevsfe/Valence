@@ -3,6 +3,7 @@ package com.chaevsfe.valence.core.config;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Map;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
@@ -111,5 +112,20 @@ class ValenceConfigTest
         String first = Files.readString(file());
         ValenceConfig.load(file(), schema());
         assertEquals(first, Files.readString(file()));
+    }
+
+    @Test
+    void saveWritesClampsAndReloads () throws Exception {
+        ValenceConfig.load(file(), schema());
+        ConfigSnapshot saved = ValenceConfig.save(file(), schema(),
+            Map.of("vertical_slabs", false, "animal_trough", true),
+            Map.of("animal_trough", Map.of("range", 99, "suppress_xp", false)));
+        assertFalse(saved.enabled("vertical_slabs"));
+        assertEquals(16, saved.options("animal_trough").intOf("range"));
+
+        ConfigSnapshot loaded = ValenceConfig.load(file(), schema());
+        assertFalse(loaded.enabled("vertical_slabs"));
+        assertEquals(16, loaded.options("animal_trough").intOf("range"));
+        assertFalse(loaded.options("animal_trough").bool("suppress_xp"));
     }
 }
