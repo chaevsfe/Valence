@@ -5,6 +5,8 @@ import com.chaevsfe.valence.core.config.ConfigSnapshot;
 import com.chaevsfe.valence.core.config.OptionBuilder;
 import com.chaevsfe.valence.modules.helditem.HeldItemReadout;
 import com.chaevsfe.valence.modules.infohud.InfoHud;
+import com.chaevsfe.valence.modules.inventoryactions.InventoryActions;
+import com.chaevsfe.valence.modules.reacharound.Reacharound;
 import com.chaevsfe.valence.modules.trough.AnimalTrough;
 import com.chaevsfe.valence.modules.verticalslabs.VerticalSlabs;
 import com.chaevsfe.valence.modules.woodworks.Woodworks;
@@ -22,7 +24,9 @@ public final class Modules
         new InfoHud(),
         new VerticalSlabs(),
         new Woodworks(),
-        new AnimalTrough());
+        new AnimalTrough(),
+        new InventoryActions(),
+        new Reacharound());
 
     private static final Map<String, ValenceModule> BY_ID =
         ALL.stream().collect(Collectors.toMap(m -> m.id, Function.identity()));
