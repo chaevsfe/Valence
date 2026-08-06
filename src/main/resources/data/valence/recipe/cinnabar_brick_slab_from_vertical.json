@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "valence:cinnabar_brick_vertical_slab"
+  ],
+  "result": {
+    "id": "minecraft:cinnabar_brick_slab"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "vertical_slabs"
+    },
+    {
+      "condition": "fabric:registry_contains",
+      "values": [
+        "minecraft:cinnabar_brick_slab"
+      ]
+    }
+  ]
+}

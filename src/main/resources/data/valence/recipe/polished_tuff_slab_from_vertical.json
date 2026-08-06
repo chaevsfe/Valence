@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "valence:polished_tuff_vertical_slab"
+  ],
+  "result": {
+    "id": "minecraft:polished_tuff_slab"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "vertical_slabs"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "valence:mossy_cobblestone_vertical_slab"
+  ],
+  "result": {
+    "id": "minecraft:mossy_cobblestone_slab"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "vertical_slabs"
+    }
+  ]
+}

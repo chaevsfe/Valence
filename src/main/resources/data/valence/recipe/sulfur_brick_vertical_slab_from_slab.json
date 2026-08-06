@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:sulfur_brick_slab"
+  ],
+  "result": {
+    "id": "valence:sulfur_brick_vertical_slab"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "vertical_slabs"
+    },
+    {
+      "condition": "fabric:registry_contains",
+      "values": [
+        "minecraft:sulfur_brick_slab"
+      ]
+    }
+  ]
+}

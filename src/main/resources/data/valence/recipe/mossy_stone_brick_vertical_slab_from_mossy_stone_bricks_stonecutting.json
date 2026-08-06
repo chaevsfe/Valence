@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:mossy_stone_bricks",
+  "result": {
+    "count": 2,
+    "id": "valence:mossy_stone_brick_vertical_slab"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "vertical_slabs"
+    }
+  ]
+}

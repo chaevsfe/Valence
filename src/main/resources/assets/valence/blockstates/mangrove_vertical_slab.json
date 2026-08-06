@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "facing=north,double=false": {
+      "model": "valence:block/mangrove_vertical_slab"
+    },
+    "facing=east,double=false": {
+      "model": "valence:block/mangrove_vertical_slab",
+      "y": 90
+    },
+    "facing=south,double=false": {
+      "model": "valence:block/mangrove_vertical_slab",
+      "y": 180
+    },
+    "facing=west,double=false": {
+      "model": "valence:block/mangrove_vertical_slab",
+      "y": 270
+    },
+    "facing=north,double=true": {
+      "model": "minecraft:block/mangrove_planks"
+    },
+    "facing=east,double=true": {
+      "model": "minecraft:block/mangrove_planks"
+    },
+    "facing=south,double=true": {
+      "model": "minecraft:block/mangrove_planks"
+    },
+    "facing=west,double=true": {
+      "model": "minecraft:block/mangrove_planks"
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "valence:andesite_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:blackstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:cinnabar_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:cinnabar_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:cobbled_deepslate_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:cobblestone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:cut_red_sandstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:cut_sandstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:dark_prismarine_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:deepslate_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:deepslate_tile_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:diorite_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:end_stone_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:exposed_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:granite_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:mossy_cobblestone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:mossy_stone_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:mud_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:nether_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:oxidized_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:petrified_oak_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_andesite_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_blackstone_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_blackstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_cinnabar_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_deepslate_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_diorite_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_granite_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_sulfur_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:polished_tuff_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:prismarine_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:prismarine_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:purpur_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:quartz_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:red_nether_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:red_sandstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:resin_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:sandstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:smooth_quartz_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:smooth_red_sandstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:smooth_sandstone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:smooth_stone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:stone_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:stone_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:sulfur_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:sulfur_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:tuff_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:tuff_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:waxed_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:waxed_exposed_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:waxed_oxidized_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:waxed_weathered_cut_copper_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "valence:weathered_cut_copper_vertical_slab",
+      "required": false
+    }
+  ]
+}

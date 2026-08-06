@@ -3,15 +3,32 @@ package com.chaevsfe.valence.core.module;
 import com.chaevsfe.valence.core.config.ConfigSchema;
 import com.chaevsfe.valence.core.config.ConfigSnapshot;
 import com.chaevsfe.valence.core.config.OptionBuilder;
+import com.chaevsfe.valence.modules.helditem.HeldItemReadout;
+import com.chaevsfe.valence.modules.infohud.InfoHud;
+import com.chaevsfe.valence.modules.verticalslabs.VerticalSlabs;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public final class Modules
 {
-    public static final List<ValenceModule> ALL = List.of();
+    public static final List<ValenceModule> ALL = List.of(
+        new HeldItemReadout(),
+        new InfoHud(),
+        new VerticalSlabs());
+
+    private static final Map<String, ValenceModule> BY_ID =
+        ALL.stream().collect(Collectors.toMap(m -> m.id, Function.identity()));
 
     private Modules () { }
+
+    public static boolean isEnabled (String id) {
+        ValenceModule m = BY_ID.get(id);
+        return m != null && m.enabled();
+    }
 
     public static ConfigSchema schema () {
         List<ConfigSchema.ModuleDef> defs = new ArrayList<>();

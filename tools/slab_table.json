@@ -1,0 +1,821 @@
+{
+ "mc": "26.2",
+ "slabs": [
+  {
+   "id": "acacia_slab",
+   "double_model": "minecraft:block/acacia_planks",
+   "textures": {
+    "bottom": "minecraft:block/acacia_planks",
+    "top": "minecraft:block/acacia_planks",
+    "side": "minecraft:block/acacia_planks"
+   },
+   "parent": "minecraft:acacia_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "andesite_slab",
+   "double_model": "minecraft:block/andesite",
+   "textures": {
+    "bottom": "minecraft:block/andesite",
+    "top": "minecraft:block/andesite",
+    "side": "minecraft:block/andesite"
+   },
+   "parent": "minecraft:andesite",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "bamboo_mosaic_slab",
+   "double_model": "minecraft:block/bamboo_mosaic",
+   "textures": {
+    "bottom": "minecraft:block/bamboo_mosaic",
+    "top": "minecraft:block/bamboo_mosaic",
+    "side": "minecraft:block/bamboo_mosaic"
+   },
+   "parent": "minecraft:bamboo_mosaic",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "bamboo_slab",
+   "double_model": "minecraft:block/bamboo_planks",
+   "textures": {
+    "bottom": "minecraft:block/bamboo_planks",
+    "top": "minecraft:block/bamboo_planks",
+    "side": "minecraft:block/bamboo_planks"
+   },
+   "parent": "minecraft:bamboo_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "birch_slab",
+   "double_model": "minecraft:block/birch_planks",
+   "textures": {
+    "bottom": "minecraft:block/birch_planks",
+    "top": "minecraft:block/birch_planks",
+    "side": "minecraft:block/birch_planks"
+   },
+   "parent": "minecraft:birch_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "blackstone_slab",
+   "double_model": "minecraft:block/blackstone",
+   "textures": {
+    "bottom": "minecraft:block/blackstone_top",
+    "top": "minecraft:block/blackstone_top",
+    "side": "minecraft:block/blackstone"
+   },
+   "parent": "minecraft:blackstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "brick_slab",
+   "double_model": "minecraft:block/bricks",
+   "textures": {
+    "bottom": "minecraft:block/bricks",
+    "top": "minecraft:block/bricks",
+    "side": "minecraft:block/bricks"
+   },
+   "parent": "minecraft:bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "cherry_slab",
+   "double_model": "minecraft:block/cherry_planks",
+   "textures": {
+    "bottom": "minecraft:block/cherry_planks",
+    "top": "minecraft:block/cherry_planks",
+    "side": "minecraft:block/cherry_planks"
+   },
+   "parent": "minecraft:cherry_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "cinnabar_brick_slab",
+   "double_model": "minecraft:block/cinnabar_bricks",
+   "textures": {
+    "bottom": "minecraft:block/cinnabar_bricks",
+    "top": "minecraft:block/cinnabar_bricks",
+    "side": "minecraft:block/cinnabar_bricks"
+   },
+   "parent": "minecraft:cinnabar_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "cinnabar_slab",
+   "double_model": "minecraft:block/cinnabar",
+   "textures": {
+    "bottom": "minecraft:block/cinnabar",
+    "top": "minecraft:block/cinnabar",
+    "side": "minecraft:block/cinnabar"
+   },
+   "parent": "minecraft:cinnabar",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "cobbled_deepslate_slab",
+   "double_model": "minecraft:block/cobbled_deepslate",
+   "textures": {
+    "bottom": "minecraft:block/cobbled_deepslate",
+    "top": "minecraft:block/cobbled_deepslate",
+    "side": "minecraft:block/cobbled_deepslate"
+   },
+   "parent": "minecraft:cobbled_deepslate",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "cobblestone_slab",
+   "double_model": "minecraft:block/cobblestone",
+   "textures": {
+    "bottom": "minecraft:block/cobblestone",
+    "top": "minecraft:block/cobblestone",
+    "side": "minecraft:block/cobblestone"
+   },
+   "parent": "minecraft:cobblestone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "crimson_slab",
+   "double_model": "minecraft:block/crimson_planks",
+   "textures": {
+    "bottom": "minecraft:block/crimson_planks",
+    "top": "minecraft:block/crimson_planks",
+    "side": "minecraft:block/crimson_planks"
+   },
+   "parent": "minecraft:crimson_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "cut_copper_slab",
+   "double_model": "minecraft:block/cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/cut_copper",
+    "top": "minecraft:block/cut_copper",
+    "side": "minecraft:block/cut_copper"
+   },
+   "parent": "minecraft:cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  },
+  {
+   "id": "cut_red_sandstone_slab",
+   "double_model": "minecraft:block/cut_red_sandstone",
+   "textures": {
+    "bottom": "minecraft:block/red_sandstone_top",
+    "top": "minecraft:block/red_sandstone_top",
+    "side": "minecraft:block/cut_red_sandstone"
+   },
+   "parent": "minecraft:cut_red_sandstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "cut_sandstone_slab",
+   "double_model": "minecraft:block/cut_sandstone",
+   "textures": {
+    "bottom": "minecraft:block/sandstone_top",
+    "top": "minecraft:block/sandstone_top",
+    "side": "minecraft:block/cut_sandstone"
+   },
+   "parent": "minecraft:cut_sandstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "dark_oak_slab",
+   "double_model": "minecraft:block/dark_oak_planks",
+   "textures": {
+    "bottom": "minecraft:block/dark_oak_planks",
+    "top": "minecraft:block/dark_oak_planks",
+    "side": "minecraft:block/dark_oak_planks"
+   },
+   "parent": "minecraft:dark_oak_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "dark_prismarine_slab",
+   "double_model": "minecraft:block/dark_prismarine",
+   "textures": {
+    "bottom": "minecraft:block/dark_prismarine",
+    "top": "minecraft:block/dark_prismarine",
+    "side": "minecraft:block/dark_prismarine"
+   },
+   "parent": "minecraft:dark_prismarine",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "deepslate_brick_slab",
+   "double_model": "minecraft:block/deepslate_bricks",
+   "textures": {
+    "bottom": "minecraft:block/deepslate_bricks",
+    "top": "minecraft:block/deepslate_bricks",
+    "side": "minecraft:block/deepslate_bricks"
+   },
+   "parent": "minecraft:deepslate_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "deepslate_tile_slab",
+   "double_model": "minecraft:block/deepslate_tiles",
+   "textures": {
+    "bottom": "minecraft:block/deepslate_tiles",
+    "top": "minecraft:block/deepslate_tiles",
+    "side": "minecraft:block/deepslate_tiles"
+   },
+   "parent": "minecraft:deepslate_tiles",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "diorite_slab",
+   "double_model": "minecraft:block/diorite",
+   "textures": {
+    "bottom": "minecraft:block/diorite",
+    "top": "minecraft:block/diorite",
+    "side": "minecraft:block/diorite"
+   },
+   "parent": "minecraft:diorite",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "end_stone_brick_slab",
+   "double_model": "minecraft:block/end_stone_bricks",
+   "textures": {
+    "bottom": "minecraft:block/end_stone_bricks",
+    "top": "minecraft:block/end_stone_bricks",
+    "side": "minecraft:block/end_stone_bricks"
+   },
+   "parent": "minecraft:end_stone_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "exposed_cut_copper_slab",
+   "double_model": "minecraft:block/exposed_cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/exposed_cut_copper",
+    "top": "minecraft:block/exposed_cut_copper",
+    "side": "minecraft:block/exposed_cut_copper"
+   },
+   "parent": "minecraft:exposed_cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  },
+  {
+   "id": "granite_slab",
+   "double_model": "minecraft:block/granite",
+   "textures": {
+    "bottom": "minecraft:block/granite",
+    "top": "minecraft:block/granite",
+    "side": "minecraft:block/granite"
+   },
+   "parent": "minecraft:granite",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "jungle_slab",
+   "double_model": "minecraft:block/jungle_planks",
+   "textures": {
+    "bottom": "minecraft:block/jungle_planks",
+    "top": "minecraft:block/jungle_planks",
+    "side": "minecraft:block/jungle_planks"
+   },
+   "parent": "minecraft:jungle_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "mangrove_slab",
+   "double_model": "minecraft:block/mangrove_planks",
+   "textures": {
+    "bottom": "minecraft:block/mangrove_planks",
+    "top": "minecraft:block/mangrove_planks",
+    "side": "minecraft:block/mangrove_planks"
+   },
+   "parent": "minecraft:mangrove_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "mossy_cobblestone_slab",
+   "double_model": "minecraft:block/mossy_cobblestone",
+   "textures": {
+    "bottom": "minecraft:block/mossy_cobblestone",
+    "top": "minecraft:block/mossy_cobblestone",
+    "side": "minecraft:block/mossy_cobblestone"
+   },
+   "parent": "minecraft:mossy_cobblestone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "mossy_stone_brick_slab",
+   "double_model": "minecraft:block/mossy_stone_bricks",
+   "textures": {
+    "bottom": "minecraft:block/mossy_stone_bricks",
+    "top": "minecraft:block/mossy_stone_bricks",
+    "side": "minecraft:block/mossy_stone_bricks"
+   },
+   "parent": "minecraft:mossy_stone_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "mud_brick_slab",
+   "double_model": "minecraft:block/mud_bricks",
+   "textures": {
+    "bottom": "minecraft:block/mud_bricks",
+    "top": "minecraft:block/mud_bricks",
+    "side": "minecraft:block/mud_bricks"
+   },
+   "parent": "minecraft:mud_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "nether_brick_slab",
+   "double_model": "minecraft:block/nether_bricks",
+   "textures": {
+    "bottom": "minecraft:block/nether_bricks",
+    "top": "minecraft:block/nether_bricks",
+    "side": "minecraft:block/nether_bricks"
+   },
+   "parent": "minecraft:nether_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "oak_slab",
+   "double_model": "minecraft:block/oak_planks",
+   "textures": {
+    "bottom": "minecraft:block/oak_planks",
+    "top": "minecraft:block/oak_planks",
+    "side": "minecraft:block/oak_planks"
+   },
+   "parent": "minecraft:oak_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "oxidized_cut_copper_slab",
+   "double_model": "minecraft:block/oxidized_cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/oxidized_cut_copper",
+    "top": "minecraft:block/oxidized_cut_copper",
+    "side": "minecraft:block/oxidized_cut_copper"
+   },
+   "parent": "minecraft:oxidized_cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  },
+  {
+   "id": "pale_oak_slab",
+   "double_model": "minecraft:block/pale_oak_planks",
+   "textures": {
+    "bottom": "minecraft:block/pale_oak_planks",
+    "top": "minecraft:block/pale_oak_planks",
+    "side": "minecraft:block/pale_oak_planks"
+   },
+   "parent": "minecraft:pale_oak_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "petrified_oak_slab",
+   "double_model": "minecraft:block/oak_planks",
+   "textures": {
+    "bottom": "minecraft:block/oak_planks",
+    "top": "minecraft:block/oak_planks",
+    "side": "minecraft:block/oak_planks"
+   },
+   "parent": null,
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_andesite_slab",
+   "double_model": "minecraft:block/polished_andesite",
+   "textures": {
+    "bottom": "minecraft:block/polished_andesite",
+    "top": "minecraft:block/polished_andesite",
+    "side": "minecraft:block/polished_andesite"
+   },
+   "parent": "minecraft:polished_andesite",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_blackstone_brick_slab",
+   "double_model": "minecraft:block/polished_blackstone_bricks",
+   "textures": {
+    "bottom": "minecraft:block/polished_blackstone_bricks",
+    "top": "minecraft:block/polished_blackstone_bricks",
+    "side": "minecraft:block/polished_blackstone_bricks"
+   },
+   "parent": "minecraft:polished_blackstone_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_blackstone_slab",
+   "double_model": "minecraft:block/polished_blackstone",
+   "textures": {
+    "bottom": "minecraft:block/polished_blackstone",
+    "top": "minecraft:block/polished_blackstone",
+    "side": "minecraft:block/polished_blackstone"
+   },
+   "parent": "minecraft:polished_blackstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_cinnabar_slab",
+   "double_model": "minecraft:block/polished_cinnabar",
+   "textures": {
+    "bottom": "minecraft:block/polished_cinnabar",
+    "top": "minecraft:block/polished_cinnabar",
+    "side": "minecraft:block/polished_cinnabar"
+   },
+   "parent": "minecraft:polished_cinnabar",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_deepslate_slab",
+   "double_model": "minecraft:block/polished_deepslate",
+   "textures": {
+    "bottom": "minecraft:block/polished_deepslate",
+    "top": "minecraft:block/polished_deepslate",
+    "side": "minecraft:block/polished_deepslate"
+   },
+   "parent": "minecraft:polished_deepslate",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_diorite_slab",
+   "double_model": "minecraft:block/polished_diorite",
+   "textures": {
+    "bottom": "minecraft:block/polished_diorite",
+    "top": "minecraft:block/polished_diorite",
+    "side": "minecraft:block/polished_diorite"
+   },
+   "parent": "minecraft:polished_diorite",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_granite_slab",
+   "double_model": "minecraft:block/polished_granite",
+   "textures": {
+    "bottom": "minecraft:block/polished_granite",
+    "top": "minecraft:block/polished_granite",
+    "side": "minecraft:block/polished_granite"
+   },
+   "parent": "minecraft:polished_granite",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_sulfur_slab",
+   "double_model": "minecraft:block/polished_sulfur",
+   "textures": {
+    "bottom": "minecraft:block/polished_sulfur",
+    "top": "minecraft:block/polished_sulfur",
+    "side": "minecraft:block/polished_sulfur"
+   },
+   "parent": "minecraft:polished_sulfur",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "polished_tuff_slab",
+   "double_model": "minecraft:block/polished_tuff",
+   "textures": {
+    "bottom": "minecraft:block/polished_tuff",
+    "top": "minecraft:block/polished_tuff",
+    "side": "minecraft:block/polished_tuff"
+   },
+   "parent": "minecraft:polished_tuff",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "prismarine_brick_slab",
+   "double_model": "minecraft:block/prismarine_bricks",
+   "textures": {
+    "bottom": "minecraft:block/prismarine_bricks",
+    "top": "minecraft:block/prismarine_bricks",
+    "side": "minecraft:block/prismarine_bricks"
+   },
+   "parent": "minecraft:prismarine_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "prismarine_slab",
+   "double_model": "minecraft:block/prismarine",
+   "textures": {
+    "bottom": "minecraft:block/prismarine",
+    "top": "minecraft:block/prismarine",
+    "side": "minecraft:block/prismarine"
+   },
+   "parent": "minecraft:prismarine",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "purpur_slab",
+   "double_model": "minecraft:block/purpur_block",
+   "textures": {
+    "bottom": "minecraft:block/purpur_block",
+    "top": "minecraft:block/purpur_block",
+    "side": "minecraft:block/purpur_block"
+   },
+   "parent": "minecraft:purpur_block",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "quartz_slab",
+   "double_model": "minecraft:block/quartz_block",
+   "textures": {
+    "bottom": "minecraft:block/quartz_block_top",
+    "top": "minecraft:block/quartz_block_top",
+    "side": "minecraft:block/quartz_block_side"
+   },
+   "parent": "minecraft:quartz_block",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "red_nether_brick_slab",
+   "double_model": "minecraft:block/red_nether_bricks",
+   "textures": {
+    "bottom": "minecraft:block/red_nether_bricks",
+    "top": "minecraft:block/red_nether_bricks",
+    "side": "minecraft:block/red_nether_bricks"
+   },
+   "parent": "minecraft:red_nether_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "red_sandstone_slab",
+   "double_model": "minecraft:block/red_sandstone",
+   "textures": {
+    "bottom": "minecraft:block/red_sandstone_bottom",
+    "top": "minecraft:block/red_sandstone_top",
+    "side": "minecraft:block/red_sandstone"
+   },
+   "parent": "minecraft:red_sandstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "resin_brick_slab",
+   "double_model": "minecraft:block/resin_bricks",
+   "textures": {
+    "bottom": "minecraft:block/resin_bricks",
+    "top": "minecraft:block/resin_bricks",
+    "side": "minecraft:block/resin_bricks"
+   },
+   "parent": "minecraft:resin_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "sandstone_slab",
+   "double_model": "minecraft:block/sandstone",
+   "textures": {
+    "bottom": "minecraft:block/sandstone_bottom",
+    "top": "minecraft:block/sandstone_top",
+    "side": "minecraft:block/sandstone"
+   },
+   "parent": "minecraft:sandstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "smooth_quartz_slab",
+   "double_model": "minecraft:block/smooth_quartz",
+   "textures": {
+    "bottom": "minecraft:block/quartz_block_bottom",
+    "top": "minecraft:block/quartz_block_bottom",
+    "side": "minecraft:block/quartz_block_bottom"
+   },
+   "parent": "minecraft:smooth_quartz",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "smooth_red_sandstone_slab",
+   "double_model": "minecraft:block/smooth_red_sandstone",
+   "textures": {
+    "bottom": "minecraft:block/red_sandstone_top",
+    "top": "minecraft:block/red_sandstone_top",
+    "side": "minecraft:block/red_sandstone_top"
+   },
+   "parent": "minecraft:smooth_red_sandstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "smooth_sandstone_slab",
+   "double_model": "minecraft:block/smooth_sandstone",
+   "textures": {
+    "bottom": "minecraft:block/sandstone_top",
+    "top": "minecraft:block/sandstone_top",
+    "side": "minecraft:block/sandstone_top"
+   },
+   "parent": "minecraft:smooth_sandstone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "smooth_stone_slab",
+   "double_model": "minecraft:block/smooth_stone_slab_double",
+   "textures": {
+    "bottom": "minecraft:block/smooth_stone",
+    "top": "minecraft:block/smooth_stone",
+    "side": "minecraft:block/smooth_stone_slab_side"
+   },
+   "parent": "minecraft:smooth_stone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "spruce_slab",
+   "double_model": "minecraft:block/spruce_planks",
+   "textures": {
+    "bottom": "minecraft:block/spruce_planks",
+    "top": "minecraft:block/spruce_planks",
+    "side": "minecraft:block/spruce_planks"
+   },
+   "parent": "minecraft:spruce_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "stone_brick_slab",
+   "double_model": "minecraft:block/stone_bricks",
+   "textures": {
+    "bottom": "minecraft:block/stone_bricks",
+    "top": "minecraft:block/stone_bricks",
+    "side": "minecraft:block/stone_bricks"
+   },
+   "parent": "minecraft:stone_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "stone_slab",
+   "double_model": "minecraft:block/stone",
+   "textures": {
+    "bottom": "minecraft:block/stone",
+    "top": "minecraft:block/stone",
+    "side": "minecraft:block/stone"
+   },
+   "parent": "minecraft:stone",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "sulfur_brick_slab",
+   "double_model": "minecraft:block/sulfur_bricks",
+   "textures": {
+    "bottom": "minecraft:block/sulfur_bricks",
+    "top": "minecraft:block/sulfur_bricks",
+    "side": "minecraft:block/sulfur_bricks"
+   },
+   "parent": "minecraft:sulfur_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "sulfur_slab",
+   "double_model": "minecraft:block/sulfur",
+   "textures": {
+    "bottom": "minecraft:block/sulfur",
+    "top": "minecraft:block/sulfur",
+    "side": "minecraft:block/sulfur"
+   },
+   "parent": "minecraft:sulfur",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "tuff_brick_slab",
+   "double_model": "minecraft:block/tuff_bricks",
+   "textures": {
+    "bottom": "minecraft:block/tuff_bricks",
+    "top": "minecraft:block/tuff_bricks",
+    "side": "minecraft:block/tuff_bricks"
+   },
+   "parent": "minecraft:tuff_bricks",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "tuff_slab",
+   "double_model": "minecraft:block/tuff",
+   "textures": {
+    "bottom": "minecraft:block/tuff",
+    "top": "minecraft:block/tuff",
+    "side": "minecraft:block/tuff"
+   },
+   "parent": "minecraft:tuff",
+   "mineable": "pickaxe",
+   "copper": false
+  },
+  {
+   "id": "warped_slab",
+   "double_model": "minecraft:block/warped_planks",
+   "textures": {
+    "bottom": "minecraft:block/warped_planks",
+    "top": "minecraft:block/warped_planks",
+    "side": "minecraft:block/warped_planks"
+   },
+   "parent": "minecraft:warped_planks",
+   "mineable": "axe",
+   "copper": false
+  },
+  {
+   "id": "waxed_cut_copper_slab",
+   "double_model": "minecraft:block/cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/cut_copper",
+    "top": "minecraft:block/cut_copper",
+    "side": "minecraft:block/cut_copper"
+   },
+   "parent": "minecraft:waxed_cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  },
+  {
+   "id": "waxed_exposed_cut_copper_slab",
+   "double_model": "minecraft:block/exposed_cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/exposed_cut_copper",
+    "top": "minecraft:block/exposed_cut_copper",
+    "side": "minecraft:block/exposed_cut_copper"
+   },
+   "parent": "minecraft:waxed_exposed_cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  },
+  {
+   "id": "waxed_oxidized_cut_copper_slab",
+   "double_model": "minecraft:block/oxidized_cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/oxidized_cut_copper",
+    "top": "minecraft:block/oxidized_cut_copper",
+    "side": "minecraft:block/oxidized_cut_copper"
+   },
+   "parent": "minecraft:waxed_oxidized_cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  },
+  {
+   "id": "waxed_weathered_cut_copper_slab",
+   "double_model": "minecraft:block/weathered_cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/weathered_cut_copper",
+    "top": "minecraft:block/weathered_cut_copper",
+    "side": "minecraft:block/weathered_cut_copper"
+   },
+   "parent": "minecraft:waxed_weathered_cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  },
+  {
+   "id": "weathered_cut_copper_slab",
+   "double_model": "minecraft:block/weathered_cut_copper",
+   "textures": {
+    "bottom": "minecraft:block/weathered_cut_copper",
+    "top": "minecraft:block/weathered_cut_copper",
+    "side": "minecraft:block/weathered_cut_copper"
+   },
+   "parent": "minecraft:weathered_cut_copper",
+   "mineable": "pickaxe",
+   "copper": true
+  }
+ ]
+}
