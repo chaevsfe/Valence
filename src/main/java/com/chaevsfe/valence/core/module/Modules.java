@@ -13,6 +13,7 @@ import com.chaevsfe.valence.modules.verticalslabs.VerticalSlabs;
 import com.chaevsfe.valence.modules.woodworks.Woodworks;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -42,6 +43,13 @@ public final class Modules
 
     public static ValenceModule get (String id) {
         return BY_ID.get(id);
+    }
+
+    public static Map<String, Boolean> enabledMap () {
+        Map<String, Boolean> map = new LinkedHashMap<>();
+        for (ValenceModule m : ALL)
+            map.put(m.id, m.enabled());
+        return map;
     }
 
     public static ConfigSchema schema () {

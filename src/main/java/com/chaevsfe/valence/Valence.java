@@ -8,6 +8,7 @@ import com.chaevsfe.valence.core.config.ValenceConfig;
 import com.chaevsfe.valence.core.data.ModuleEnabledCondition;
 import com.chaevsfe.valence.core.module.Modules;
 import com.chaevsfe.valence.core.module.ValenceModule;
+import com.chaevsfe.valence.core.net.ValenceNetworking;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 
@@ -18,6 +19,7 @@ public class Valence implements ModInitializer
         ResourceConditions.register(ModuleEnabledCondition.TYPE);
         ConfigSnapshot snap = ValenceConfig.load(ModConstants.configPath(), Modules.schema());
         Modules.applyConfig(snap);
+        ValenceNetworking.register();
 
         for (ValenceModule m : Modules.ALL)
             m.register();

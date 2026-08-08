@@ -5,11 +5,14 @@ import com.chaevsfe.valence.core.ModConstants;
 import com.chaevsfe.valence.core.module.ClientModule;
 import com.chaevsfe.valence.core.module.Modules;
 import com.chaevsfe.valence.core.module.ValenceModule;
+import com.chaevsfe.valence.core.net.HelloPayload;
 import com.mojang.blaze3d.platform.InputConstants;
 import java.util.function.Supplier;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.fabric.api.client.screen.v1.Screens;
 import net.minecraft.client.KeyMapping;
@@ -26,6 +29,9 @@ public class ValenceClient implements ClientModInitializer
     @Override
     public void onInitializeClient () {
         KEY_CATEGORY = KeyMapping.Category.register(ModConstants.loc("valence"));
+        ClientPlayNetworking.registerGlobalReceiver(HelloPayload.TYPE,
+            (payload, context) -> ServerSession.accept(payload.enabled()));
+        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> ServerSession.clear());
         for (ValenceModule m : Modules.ALL) {
             Supplier<ClientModule> client = m.client();
             if (client != null)

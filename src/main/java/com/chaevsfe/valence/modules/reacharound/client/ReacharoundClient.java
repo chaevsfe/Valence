@@ -1,5 +1,6 @@
 package com.chaevsfe.valence.modules.reacharound.client;
 
+import com.chaevsfe.valence.client.ServerSession;
 import com.chaevsfe.valence.core.ModConstants;
 import com.chaevsfe.valence.core.module.ClientModule;
 import com.chaevsfe.valence.modules.reacharound.Reacharound;
@@ -40,9 +41,13 @@ public class ReacharoundClient implements ClientModule
 
     private void tick (Minecraft client) {
         target = null;
-        if (!module.enabled() || client.player == null || client.level == null || !client.hasSingleplayerServer())
+        if (!module.enabled() || client.player == null || client.level == null || !armed(client))
             return;
         target = compute(client);
+    }
+
+    private static boolean armed (Minecraft client) {
+        return client.hasSingleplayerServer() || ServerSession.allows("reacharound");
     }
 
     private BlockHitResult compute (Minecraft client) {
