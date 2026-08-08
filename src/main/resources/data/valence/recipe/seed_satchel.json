@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": "minecraft:string",
+    "L": "minecraft:leather"
+  },
+  "pattern": [
+    " S ",
+    "L L",
+    " L "
+  ],
+  "result": {
+    "count": 1,
+    "id": "valence:seed_satchel"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "valence:module_enabled",
+      "module": "seed_satchel"
+    }
+  ]
+}

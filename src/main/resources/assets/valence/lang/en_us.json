@@ -112,12 +112,14 @@
   "block.valence.waxed_oxidized_cut_copper_vertical_slab": "Waxed Oxidized Cut Copper Vertical Slab",
   "block.valence.waxed_weathered_cut_copper_vertical_slab": "Waxed Weathered Cut Copper Vertical Slab",
   "block.valence.weathered_cut_copper_vertical_slab": "Weathered Cut Copper Vertical Slab",
+  "item.valence.seed_satchel": "Seed Satchel",
   "itemGroup.valence": "Valence",
   "key.categories.valence": "Valence",
   "key.categories.valence.valence": "Valence",
   "key.valence.config": "Open Valence Settings",
   "key.valence.info_hud": "Toggle Info HUD",
   "key.valence.sort": "Sort Hovered Inventory",
+  "tag.item.valence.seed_satchel_plantables": "Plantables",
   "valence.button.deposit": "Deposit matching stacks",
   "valence.button.deposit_all": "Deposit everything",
   "valence.button.extract": "Extract matching stacks",
@@ -134,6 +136,8 @@
   "valence.module.info_hud": "Info HUD",
   "valence.module.inventory_actions": "Inventory Actions",
   "valence.module.reacharound": "Reacharound",
+  "valence.module.seed_satchel": "Seed Satchel",
   "valence.module.vertical_slabs": "Vertical Slabs",
-  "valence.module.woodworks": "Woodworks"
+  "valence.module.woodworks": "Woodworks",
+  "valence.seed_satchel.fill": "%s of %s slots filled"
 }

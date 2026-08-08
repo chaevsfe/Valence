@@ -7,6 +7,7 @@ import com.chaevsfe.valence.modules.helditem.HeldItemReadout;
 import com.chaevsfe.valence.modules.infohud.InfoHud;
 import com.chaevsfe.valence.modules.inventoryactions.InventoryActions;
 import com.chaevsfe.valence.modules.reacharound.Reacharound;
+import com.chaevsfe.valence.modules.satchel.SeedSatchel;
 import com.chaevsfe.valence.modules.trough.AnimalTrough;
 import com.chaevsfe.valence.modules.verticalslabs.VerticalSlabs;
 import com.chaevsfe.valence.modules.woodworks.Woodworks;
@@ -25,6 +26,7 @@ public final class Modules
         new VerticalSlabs(),
         new Woodworks(),
         new AnimalTrough(),
+        new SeedSatchel(),
         new InventoryActions(),
         new Reacharound());
 
