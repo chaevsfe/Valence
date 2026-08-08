@@ -1,9 +1,8 @@
 package com.chaevsfe.valence.modules.inventoryactions.client;
 
+import com.chaevsfe.valence.modules.inventoryactions.SortLogic;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.item.ItemStack;
@@ -11,11 +10,6 @@ import net.minecraft.world.item.ItemStack;
 public final class ClickPlan
 {
     public record Step (int slot, ContainerInput type, ItemStack expect) { }
-
-    private static final Comparator<ItemStack> ORDER = Comparator
-        .comparingInt((ItemStack stack) -> BuiltInRegistries.ITEM.getId(stack.getItem()))
-        .thenComparingInt(stack -> stack.getComponents().hashCode())
-        .thenComparing(Comparator.comparingInt(ItemStack::getCount).reversed());
 
     private final List<Integer> region;
     private final List<ItemStack> sim;
@@ -103,7 +97,7 @@ public final class ClickPlan
         for (ItemStack stack : sim)
             if (!stack.isEmpty())
                 target.add(stack.copy());
-        target.sort(ORDER);
+        target.sort(SortLogic.ORDER);
         while (target.size() < sim.size())
             target.add(ItemStack.EMPTY);
 

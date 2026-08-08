@@ -2,14 +2,15 @@ package com.chaevsfe.valence.modules.inventoryactions.client;
 
 import com.chaevsfe.valence.client.ValenceClient;
 import com.chaevsfe.valence.core.module.ClientModule;
+import com.chaevsfe.valence.core.net.SortPayload;
 import com.chaevsfe.valence.modules.inventoryactions.InventoryActions;
+import com.chaevsfe.valence.modules.inventoryactions.SortLogic;
 import com.mojang.blaze3d.platform.InputConstants;
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Supplier;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents;
 import net.fabricmc.fabric.api.client.screen.v1.Screens;
@@ -23,7 +24,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.BeaconScreen;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
 import net.minecraft.client.gui.screens.inventory.MerchantScreen;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerInput;
@@ -57,9 +57,9 @@ public class InventoryActionsClient implements ClientModule
         if (screen instanceof CreativeModeInventoryScreen || screen instanceof MerchantScreen || screen instanceof BeaconScreen)
             return;
         AbstractContainerMenu menu = containerScreen.getMenu();
-        List<Integer> containerSlots = containerRegion(menu, client.player);
-        List<Integer> inventorySlots = playerRegion(menu, client.player, false);
-        List<Integer> matchSlots = playerRegion(menu, client.player, true);
+        List<Integer> containerSlots = SortLogic.containerRegion(menu, client.player);
+        List<Integer> inventorySlots = SortLogic.playerRegion(menu, client.player, false);
+        List<Integer> matchSlots = SortLogic.playerRegion(menu, client.player, true);
 
         if (module.enabled() && module.options().bool("screen_buttons")) {
             List<AbstractWidget> widgets = Screens.getWidgets(screen);
@@ -70,17 +70,17 @@ public class InventoryActionsClient implements ClientModule
             List<Integer> depositSlots = module.options().bool("deposit_hotbar") ? matchSlots : inventorySlots;
             if (!containerSlots.isEmpty()) {
                 widgets.add(action("⇅", "valence.button.sort_container", x, y,
-                    () -> ClickPlan.sort(menu, containerSlots)));
+                    () -> sort(menu, containerSlots, false)));
                 widgets.add(action("▲", "valence.button.deposit", x, y + 14,
-                    () -> ClickPlan.quickMoveMatching(menu, depositSlots, containerSlots)));
+                    () -> start(ClickPlan.quickMoveMatching(menu, depositSlots, containerSlots))));
                 widgets.add(action("⇈", "valence.button.deposit_all", x, y + 28,
-                    () -> ClickPlan.quickMoveAll(menu, depositSlots)));
+                    () -> start(ClickPlan.quickMoveAll(menu, depositSlots))));
                 widgets.add(action("▼", "valence.button.extract", x, y + 42,
-                    () -> ClickPlan.quickMoveMatching(menu, containerSlots, matchSlots)));
+                    () -> start(ClickPlan.quickMoveMatching(menu, containerSlots, matchSlots))));
             }
             if (!inventorySlots.isEmpty())
                 widgets.add(action("⇅", "valence.button.sort_player", x, containerScreen.topPos + containerScreen.imageHeight - 12 + module.options().intOf("button_y"),
-                    () -> ClickPlan.sort(menu, inventorySlots)));
+                    () -> sort(menu, inventorySlots, true)));
         }
 
         ScreenKeyboardEvents.allowKeyPress(screen).register((s, event) -> {
@@ -88,17 +88,17 @@ public class InventoryActionsClient implements ClientModule
                 return true;
             Slot hovered = containerScreen.hoveredSlot;
             if (hovered != null && containerSlots.contains(hovered.index))
-                start(ClickPlan.sort(menu, containerSlots));
+                sort(menu, containerSlots, false);
             else if (!inventorySlots.isEmpty())
-                start(ClickPlan.sort(menu, inventorySlots));
+                sort(menu, inventorySlots, true);
             return false;
         });
     }
 
-    private Button action (String label, String tooltip, int x, int y, Supplier<List<ClickPlan.Step>> plan) {
+    private Button action (String label, String tooltip, int x, int y, Runnable act) {
         return Button.builder(Component.literal(label), pressed -> {
                 if (module.enabled())
-                    start(plan.get());
+                    act.run();
             })
             .bounds(x, y, 12, 12)
             .tooltip(Tooltip.create(Component.translatable(tooltip)))
@@ -146,23 +146,15 @@ public class InventoryActionsClient implements ClientModule
             active = null;
     }
 
-    private static List<Integer> containerRegion (AbstractContainerMenu menu, LocalPlayer player) {
-        List<Integer> region = new ArrayList<>();
-        for (Slot slot : menu.slots)
-            if (slot.container != player.getInventory() && slot.getClass() == Slot.class && slot.mayPickup(player))
-                region.add(slot.index);
-        return region.size() >= 5 ? region : List.of();
+    private void sort (AbstractContainerMenu menu, List<Integer> region, boolean playerSide) {
+        if (!sortRemotely(menu, playerSide))
+            start(ClickPlan.sort(menu, region));
     }
 
-    private static List<Integer> playerRegion (AbstractContainerMenu menu, LocalPlayer player, boolean hotbar) {
-        List<Integer> region = new ArrayList<>();
-        for (Slot slot : menu.slots) {
-            if (slot.container != player.getInventory())
-                continue;
-            int index = slot.getContainerSlot();
-            if (index >= 9 && index < 36 || hotbar && index < 9)
-                region.add(slot.index);
-        }
-        return region;
+    private boolean sortRemotely (AbstractContainerMenu menu, boolean playerSide) {
+        if (!ClientPlayNetworking.canSend(SortPayload.TYPE))
+            return false;
+        ClientPlayNetworking.send(new SortPayload(menu.containerId, playerSide));
+        return true;
     }
 }
