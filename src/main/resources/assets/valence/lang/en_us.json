@@ -139,5 +139,7 @@
   "valence.module.seed_satchel": "Seed Satchel",
   "valence.module.vertical_slabs": "Vertical Slabs",
   "valence.module.woodworks": "Woodworks",
+  "valence.seed_satchel.collecting_off": "Not collecting",
+  "valence.seed_satchel.collecting_on": "Collecting seeds",
   "valence.seed_satchel.fill": "%s of %s slots filled"
 }

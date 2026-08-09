@@ -5,6 +5,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleMenuProvider;
@@ -34,9 +35,20 @@ public class ItemSeedSatchel extends Item
         ItemStack satchel = player.getItemInHand(hand);
         if (!SeedSatchel.instance().enabled())
             return InteractionResult.PASS;
+        if (player.isSecondaryUseActive())
+            return toggleCollecting(satchel, player);
         player.openMenu(new SimpleMenuProvider(
             (containerId, inventory, opener) -> new SatchelMenu(containerId, inventory, new SatchelContainer(satchel)),
             satchel.getHoverName()));
+        return InteractionResult.SUCCESS;
+    }
+
+    private static InteractionResult toggleCollecting (ItemStack satchel, Player player) {
+        boolean on = !SeedSatchel.collecting(satchel);
+        satchel.set(SeedSatchel.COLLECTING, on);
+        if (player instanceof ServerPlayer server)
+            server.sendSystemMessage(Component.translatable(
+                on ? "valence.seed_satchel.collecting_on" : "valence.seed_satchel.collecting_off"), true);
         return InteractionResult.SUCCESS;
     }
 
@@ -73,7 +85,9 @@ public class ItemSeedSatchel extends Item
         if (!(entity instanceof Player player) || level.getGameTime() % SCAN_INTERVAL != 0)
             return;
         SeedSatchel module = SeedSatchel.instance();
-        if (!module.enabled() || !module.options().bool("absorb"))
+        if (!module.enabled() || !module.options().bool("absorb") || !SeedSatchel.collecting(satchel))
+            return;
+        if (player.containerMenu instanceof SatchelMenu)
             return;
 
         Inventory inventory = player.getInventory();
@@ -98,10 +112,11 @@ public class ItemSeedSatchel extends Item
     public void appendHoverText (ItemStack satchel, TooltipContext context, TooltipDisplay display,
                                  Consumer<Component> lines, TooltipFlag flag) {
         ItemContainerContents stored = satchel.get(DataComponents.CONTAINER);
-        if (stored == null)
-            return;
-        long filled = stored.nonEmptyItemCopyStream().count();
-        lines.accept(Component.translatable("valence.seed_satchel.fill", filled, SatchelContainer.SIZE));
+        if (stored != null)
+            lines.accept(Component.translatable("valence.seed_satchel.fill",
+                stored.nonEmptyItemCopyStream().count(), SatchelContainer.SIZE));
+        lines.accept(Component.translatable(SeedSatchel.collecting(satchel)
+            ? "valence.seed_satchel.collecting_on" : "valence.seed_satchel.collecting_off"));
     }
 
     private static class SatchelPlaceContext extends UseOnContext

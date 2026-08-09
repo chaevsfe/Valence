@@ -5,9 +5,12 @@ import com.chaevsfe.valence.core.config.OptionBuilder;
 import com.chaevsfe.valence.core.module.ModuleCategory;
 import com.chaevsfe.valence.core.module.ModuleSide;
 import com.chaevsfe.valence.core.module.ValenceModule;
+import com.mojang.serialization.Codec;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -24,6 +27,7 @@ public class SeedSatchel extends ValenceModule
     public static final TagKey<Item> PLANTABLES = TagKey.create(Registries.ITEM, ModConstants.loc("seed_satchel_plantables"));
 
     public static Item SATCHEL;
+    public static DataComponentType<Boolean> COLLECTING;
     private static SeedSatchel instance;
 
     public SeedSatchel () {
@@ -47,11 +51,22 @@ public class SeedSatchel extends ValenceModule
 
     @Override
     public void register () {
+        COLLECTING = Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, ModConstants.loc("collecting"),
+            DataComponentType.<Boolean>builder()
+                .persistent(Codec.BOOL)
+                .networkSynchronized(ByteBufCodecs.BOOL.cast())
+                .build());
+
         SATCHEL = new ItemSeedSatchel(new Item.Properties()
             .setId(ResourceKey.create(Registries.ITEM, ModConstants.loc("seed_satchel")))
             .stacksTo(1)
-            .component(DataComponents.CONTAINER, ItemContainerContents.EMPTY));
+            .component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)
+            .component(COLLECTING, true));
         Registry.register(BuiltInRegistries.ITEM, ModConstants.loc("seed_satchel"), SATCHEL);
+    }
+
+    public static boolean collecting (ItemStack satchel) {
+        return satchel.getOrDefault(COLLECTING, true);
     }
 
     @Override
