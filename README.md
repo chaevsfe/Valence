@@ -19,8 +19,9 @@ module that can be toggled in the config; with everything off the game is vanill
 
 - **Animal Trough** — a hopper-fillable block that feeds breedable animals in range.
   Trough-bred animals drop no experience, and it idles once the area is crowded.
-- **Seed Satchel** — a bag that gathers plantable items as you pick them up and sows
-  them straight from its contents. Sneak-use to open it.
+- **Seed Satchel** — a bag that gathers plantable items and sows them straight from its
+  contents. Right-click to plant, or to open it when there is nothing to plant;
+  sneak-right-click to stop it collecting so seeds stay in your inventory.
 
 **Interface**
 
