@@ -37,6 +37,9 @@ module that can be toggled in the config; with everything off the game is vanill
 - **Reacharound** — look past a ledge edge and place onto the hidden face, bridging
   forward or downward without sneaking. Singleplayer, or multiplayer when the server
   runs Valence and allows it.
+- **Flexible Placement** — hold Left Alt while placing to take the orientation vanilla
+  would not give you: stairs, slabs and trapdoors go in the opposite half, and logs
+  take the axis you are facing. Works on any server.
 
 ## Settings
 
