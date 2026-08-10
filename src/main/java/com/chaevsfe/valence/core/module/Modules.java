@@ -6,6 +6,7 @@ import com.chaevsfe.valence.core.config.OptionBuilder;
 import com.chaevsfe.valence.modules.helditem.HeldItemReadout;
 import com.chaevsfe.valence.modules.infohud.InfoHud;
 import com.chaevsfe.valence.modules.inventoryactions.InventoryActions;
+import com.chaevsfe.valence.modules.placement.FlexiblePlacement;
 import com.chaevsfe.valence.modules.reacharound.Reacharound;
 import com.chaevsfe.valence.modules.satchel.SeedSatchel;
 import com.chaevsfe.valence.modules.trough.AnimalTrough;
@@ -29,7 +30,8 @@ public final class Modules
         new AnimalTrough(),
         new SeedSatchel(),
         new InventoryActions(),
-        new Reacharound());
+        new Reacharound(),
+        new FlexiblePlacement());
 
     private static final Map<String, ValenceModule> BY_ID =
         ALL.stream().collect(Collectors.toMap(m -> m.id, Function.identity()));
